@@ -1,5 +1,19 @@
 @import "./variables.scss";
+@import "./slice.scss";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+}
 
 .heading {
-  color: $primary-color;
+  color: $dark-blue;
+}
+
+.headingWrapper {
+  height: 100px;
+  background-color: $light-gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

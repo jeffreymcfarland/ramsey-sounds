@@ -1,0 +1,46 @@
+@mixin slice-sizing($height) {
+  width: 100%;
+  @if $height == sm {
+    height: 50px;
+  } @else if $height == md {
+    height: 100px;
+  } @else if $height == lg {
+    height: 150px;
+  }
+}
+
+@mixin slice-position($direction, $position) {
+  display: flex;
+  #{$direction}: $position;
+}
+
+.Slice {
+  &-sm {
+    @include slice-sizing(sm);
+  }
+  &-md {
+    @include slice-sizing(md);
+  }
+  &-lg {
+    @include slice-sizing(lg);
+  }
+
+  &-horizontalLeft {
+    @include slice-position(justify-content, left);
+  }
+  &-horizontalCenter {
+    @include slice-position(justify-content, space-around);
+  }
+  &-horizontalRight {
+    @include slice-position(justify-content, right);
+  }
+  &-verticalTop {
+    @include slice-position(align-items, start);
+  }
+  &-verticalCenter {
+    @include slice-position(align-items, center);
+  }
+  &-verticalBottom {
+    @include slice-position(align-items, end);
+  }
+}

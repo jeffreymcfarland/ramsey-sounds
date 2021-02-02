@@ -1,11 +1,11 @@
 import * as React from "react";
 
-const Button = () => {
+const Spread = () => {
   return (
     <div>
-      <h1>Button</h1>
+      <h1>Spread</h1>
     </div>
   );
 };
 
-export default Button;
+export default Spread;
