@@ -6,33 +6,58 @@ import Nav from "../components/nav";
 import Sound from "../components/sound";
 import Slice from "../layouts/slice";
 
+// const labels = ['Dave Laughing', 'Label', 'Label', 'Label', 'Label', 'Label']
+
 const Home = () => {
   return (
     <>
       <header>
-        <div class='headingWrapper'>
-          <h1 class='heading'>Ramsey Sounds</h1>
+        <div class='headingWrapper bg-lightGray'>
+          <h1 class='color-darkBlue'>Ramsey Sounds</h1>
         </div>
       </header>
-      <main>
+      <main class={"bg-darkBlue"}>
         <Slice h='lg' hDir='Center' vDir='Center'>
-          <Button />
-          <Button />
+          <Button>
+            <Sound />
+            <Label label='Dave Laughing' />
+          </Button>
+          <Button>
+            <Sound />
+            <Label label='Label' />
+          </Button>
+          <Button>
+            <Sound />
+            <Label label='Label' />
+          </Button>
+          <Button>
+            <Sound />
+            <Label label='Label' />
+          </Button>
+          <Button>
+            <Sound />
+            <Label label='Label' />
+          </Button>
+          <Button>
+            <Sound />
+            <Label label='Label' />
+          </Button>
         </Slice>
-        <Slice h='lg' hDir='Center' vDir='Center'>
-          <Button />
-          <Button />
-        </Slice>
-        <Slice h='lg' hDir='Center' vDir='Center'>
-          <Button />
-          <Button />
-        </Slice>
-        <Label />
         <Sound />
       </main>
       <footer>
         <Nav />
       </footer>
+      <div>
+        Icons made by{" "}
+        <a href='https://www.freepik.com' title='Freepik'>
+          Freepik
+        </a>{" "}
+        from{" "}
+        <a href='https://www.flaticon.com/' title='Flaticon'>
+          www.flaticon.com
+        </a>
+      </div>
     </>
   );
 };

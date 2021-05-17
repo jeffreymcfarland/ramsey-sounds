@@ -1,9 +1,9 @@
 import * as React from "react";
 
-const Label = () => {
+const Label = (props) => {
   return (
-    <div>
-      <h1>Label</h1>
+    <div class='Label-wrapper color-lightGray'>
+      <h2>{props.label}</h2>
     </div>
   );
 };

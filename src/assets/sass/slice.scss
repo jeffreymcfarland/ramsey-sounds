@@ -1,16 +1,17 @@
 @mixin slice-sizing($height) {
   width: 100%;
   @if $height == sm {
-    height: 50px;
-  } @else if $height == md {
-    height: 100px;
-  } @else if $height == lg {
     height: 150px;
+  } @else if $height == md {
+    height: 300px;
+  } @else if $height == lg {
+    height: 450px;
   }
 }
 
 @mixin slice-position($direction, $position) {
   display: flex;
+  flex-wrap: wrap;
   #{$direction}: $position;
 }
 

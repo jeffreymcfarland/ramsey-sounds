@@ -1,18 +1,15 @@
 @import "./variables.scss";
 @import "./slice.scss";
+@import "./sound.scss";
+@import "./label.scss";
 
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0px;
 }
 
-.heading {
-  color: $dark-blue;
-}
-
 .headingWrapper {
   height: 100px;
-  background-color: $light-gray;
   display: flex;
   justify-content: center;
   align-items: center;

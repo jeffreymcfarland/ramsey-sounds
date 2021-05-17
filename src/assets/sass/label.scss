@@ -1,0 +1,7 @@
+@import "./variables.scss";
+
+.Label-wrapper {
+  & h2 {
+    margin: 0px;
+  }
+}

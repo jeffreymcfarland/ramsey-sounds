@@ -1,0 +1,39 @@
+@use "sass:map";
+@import "./variables.scss";
+
+.Sound {
+  &-buttonWrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    flex: 0 1 50%;
+
+    @media (min-width: 601px) {
+      flex: 0 1 33.333%;
+    }
+  }
+
+  &-button {
+    border: none;
+    background-color: inherit;
+
+    &:focus {
+      .button-svg {
+        fill: map.get($colors, "alternateYellow");
+      }
+    }
+  }
+}
+
+.button-svg {
+  fill: map.get($colors, "lightGray");
+  width: 50px;
+  height: 70px;
+  transition: all 0.25s ease;
+
+  &:hover {
+    margin: 0px;
+    fill: map.get($colors, "White");
+    width: 55px;
+  }
+}
