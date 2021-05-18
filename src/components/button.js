@@ -1,9 +1,9 @@
 import * as React from "react";
 
-const Button = ({ children }) => {
+const Button = ({ selected, children }) => {
   return (
     <div class='Sound-buttonWrapper'>
-      <button class='Sound-button' data-button-sound>
+      <button class={`Sound-button ${selected}`} data-button-sound>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='93'

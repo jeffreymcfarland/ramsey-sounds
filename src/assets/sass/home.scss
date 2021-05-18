@@ -1,7 +1,9 @@
 @import "./variables.scss";
 @import "./slice.scss";
+@import "./block.scss";
 @import "./sound.scss";
 @import "./label.scss";
+@import "./nav.scss";
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -13,4 +15,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  & h1 {
+    font-weight: normal;
+  }
+}
+
+.icon-credit {
+  display: none;
 }

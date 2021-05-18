@@ -16,12 +16,6 @@
   &-button {
     border: none;
     background-color: inherit;
-
-    &:focus {
-      .button-svg {
-        fill: map.get($colors, "alternateYellow");
-      }
-    }
   }
 }
 
@@ -33,7 +27,7 @@
 
   &:hover {
     margin: 0px;
-    fill: map.get($colors, "White");
+    fill: map.get($colors, "alternateYellow");
     width: 55px;
   }
 }
