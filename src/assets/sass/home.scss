@@ -1,3 +1,4 @@
+@use "sass:map";
 @import "./variables.scss";
 @import "./slice.scss";
 @import "./block.scss";
@@ -8,6 +9,12 @@
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0px;
+  background-color: map.get($colors, "darkBlue");
+
+  & h1,
+  h2 {
+    font-weight: normal;
+  }
 }
 
 .headingWrapper {
@@ -15,12 +22,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  & h1 {
-    font-weight: normal;
-  }
+.Selected-title {
+  border: 10px solid map.get($colors, "darkBlue");
+  border-radius: 15px;
+}
+
+.Sticky {
+  position: sticky;
+  bottom: 0px;
 }
 
 .icon-credit {
   display: none;
 }
+
+@include margin-spacing(bottom);
+@include margin-spacing(top);
+@include margin-spacing(left);
+@include margin-spacing(right);
+@include margin-spacing("");

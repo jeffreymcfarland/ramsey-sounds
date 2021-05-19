@@ -41,7 +41,7 @@ const Nav = ({ setSelectedPerson, selected }) => {
   ]);
 
   return (
-    <div class='Nav'>
+    <nav class='Nav'>
       {persons.map((person) => (
         <button
           class={`Nav-button ${
@@ -53,7 +53,7 @@ const Nav = ({ setSelectedPerson, selected }) => {
           <img src={person.src} alt={person.name} />
         </button>
       ))}
-    </div>
+    </nav>
   );
 };
 

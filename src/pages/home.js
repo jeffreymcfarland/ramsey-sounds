@@ -10,45 +10,57 @@ import "../assets/sass/home.scss";
 const Home = () => {
   const [labels, setLabels] = useState([
     { id: 1, label: "Laughing" },
-    { id: 2, label: "Label" },
-    { id: 3, label: "Label" },
-    { id: 4, label: "Label" },
-    { id: 5, label: "Label" },
-    { id: 6, label: "Label" },
+    { id: 2, label: "Crying" },
+    { id: 3, label: "Shouting" },
+    { id: 4, label: "Celebrating" },
+    { id: 5, label: "Funny" },
+    { id: 6, label: "Misc." },
   ]);
   const [selectedPerson, setSelectedPerson] = useState("Dave Ramsey");
+  const [selectedSound, setSelectedSound] = useState("");
 
   return (
     <>
       <header>
-        <div class='headingWrapper bg-lightGray'>
-          <h1 class='color-darkBlue'>Ramsey Sounds</h1>
+        <div class='headingWrapper bg-darkBlue'>
+          <h1 class='color-White'>Ramsey Sounds</h1>
         </div>
       </header>
       <main>
-        <Slice h='lg' hDir='Center' vDir='Center' classes='bg-darkBlue'>
+        <Slice
+          hDir='Center'
+          vDir='Center'
+          classes='Selected-title bg-mediumGray'
+        >
+          <h2 class='color-lightBlue'>{selectedPerson}</h2>
+        </Slice>
+        <Slice
+          h='lg'
+          hDir='Center'
+          vDir='Center'
+          classes='bg-darkBlue margin-top--md margin-bottom--md'
+        >
           {labels.map((label) => (
-            <Button key={label.id}>
+            <Button
+              setSelectedSound={setSelectedSound}
+              selected={selectedSound}
+              sound={label.label}
+              key={label.id}
+            >
               <Sound />
               <Label label={label.label} />
             </Button>
           ))}
         </Slice>
-        <Slice hDir='Center' vDir='Center' classes='bg-lightBlue'>
-          <h2 class='color-White'>{selectedPerson}</h2>
-        </Slice>
-        <Sound />
       </main>
-      <footer>
-        <Slice hDir='Center' vDir='Center'>
-          <Block classes='Block'>
-            <Nav
-              setSelectedPerson={setSelectedPerson}
-              selected={selectedPerson}
-            />
-          </Block>
-        </Slice>
-      </footer>
+      <Slice hDir='Center' vDir='Center' classes='Sticky bg-mediumGray'>
+        <Block classes='Block'>
+          <Nav
+            setSelectedPerson={setSelectedPerson}
+            selected={selectedPerson}
+          />
+        </Block>
+      </Slice>
       <div class='icon-credit'>
         Icons made by{" "}
         <a href='https://www.freepik.com' title='Freepik'>

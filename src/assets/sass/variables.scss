@@ -7,11 +7,33 @@ $colors: (
   "White": #ffffff,
 );
 
+$spacing: (
+  "sm": 10px,
+  "md": 20px,
+  "lg": 30px,
+);
+
 @each $color, $hex in $colors {
   .bg-#{$color} {
     background-color: $hex;
   }
   .color-#{$color} {
     color: $hex;
+  }
+}
+
+@mixin margin-spacing($direction) {
+  @if $direction {
+    @each $size, $unit in $spacing {
+      .margin-#{$direction}--#{$size} {
+        margin-#{$direction}: #{$unit};
+      }
+    }
+  }
+
+  @each $size, $unit in $spacing {
+    .margin--#{$size} {
+      margin: #{$unit};
+    }
   }
 }
