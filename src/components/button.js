@@ -2,7 +2,7 @@ import * as React from "react";
 
 const Button = ({ setSelectedSound, sound, selected, children }) => {
   return (
-    <div class='Sound-buttonWrapper'>
+    <div class='Sound-buttonWrapper margin-bottom--md'>
       <button
         class={`Sound-button ${sound === selected ? "selected" : ""}`}
         onClick={() => setSelectedSound(sound)}

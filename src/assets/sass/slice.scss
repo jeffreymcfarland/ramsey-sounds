@@ -1,21 +1,23 @@
 @mixin slice-sizing($height) {
   width: 100%;
   @if $height == sm {
-    height: 150px;
+    min-height: 150px;
   } @else if $height == md {
-    height: 300px;
+    min-height: 300px;
   } @else if $height == lg {
-    height: 450px;
+    min-height: 450px;
   }
 }
 
 @mixin slice-position($direction, $position) {
-  display: flex;
-  flex-wrap: wrap;
   #{$direction}: $position;
 }
 
 .Slice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
   &-sm {
     @include slice-sizing(sm);
   }
@@ -30,7 +32,7 @@
     @include slice-position(justify-content, left);
   }
   &-horizontalCenter {
-    @include slice-position(justify-content, space-around);
+    @include slice-position(justify-content, center);
   }
   &-horizontalRight {
     @include slice-position(justify-content, right);

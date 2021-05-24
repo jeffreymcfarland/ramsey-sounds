@@ -17,8 +17,21 @@ body {
   }
 }
 
+.masthead {
+  display: flex;
+  flex-direction: column;
+
+  &Wrapper {
+    height: 32px;
+
+    & img {
+      display: block;
+      height: 100%;
+    }
+  }
+}
+
 .headingWrapper {
-  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
