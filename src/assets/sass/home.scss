@@ -9,12 +9,18 @@
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0px;
-  background-color: map.get($colors, "darkBlue");
+  background-color: map.get($colors, "lightGray");
 
   & h1,
   h2 {
     font-weight: normal;
   }
+}
+
+#gatsby-focus-wrapper {
+  max-width: 600px;
+  margin: auto;
+  background-color: map.get($colors, "darkBlue");
 }
 
 .masthead {

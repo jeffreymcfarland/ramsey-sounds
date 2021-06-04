@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../components/button";
 import Label from "../components/label";
 import Nav from "../components/nav";
@@ -7,12 +7,15 @@ import Slice from "../layouts/slice";
 import Block from "../layouts/block";
 import "../assets/sass/home.scss";
 
+import daveLaugh from "../assets/audio/Dave-Laughing.mp3";
+
 const Home = () => {
   const [labels, setLabels] = useState([
     {
       person: "Dave Ramsey",
+      name: "daveRamsey",
       sounds: [
-        { id: 1, label: "Laughing" },
+        { id: 1, label: "Laughing", sound: daveLaugh },
         { id: 2, label: "Crying" },
         { id: 3, label: "Shouting" },
         { id: 4, label: "Celebrating" },
@@ -22,6 +25,7 @@ const Home = () => {
     },
     {
       person: "Rachel Cruze",
+      name: "rachelCruze",
       sounds: [
         { id: 1, label: "Laughing" },
         { id: 2, label: "Sad" },
@@ -33,18 +37,19 @@ const Home = () => {
     },
     {
       person: "Ken Coleman",
+      name: "kenColeman",
       sounds: [
         { id: 1, label: "Laughing" },
         { id: 2, label: "Crying" },
         { id: 3, label: "Shouting" },
         { id: 4, label: "Celebrating" },
         { id: 5, label: "Funny" },
-        { id: 6, label: "Weird" },
-        { id: 7, label: "Misc." },
+        { id: 6, label: "Misc." },
       ],
     },
     {
       person: "Christy Wright",
+      name: "christyWright",
       sounds: [
         { id: 1, label: "Laughing" },
         { id: 2, label: "Crying" },
@@ -56,6 +61,7 @@ const Home = () => {
     },
     {
       person: "Anthony ONeal",
+      name: "anthonyOneal",
       sounds: [
         { id: 1, label: "Laughing" },
         { id: 2, label: "Crying" },
@@ -67,6 +73,7 @@ const Home = () => {
     },
     {
       person: "Dr. John Delony",
+      name: "drJohnDelony",
       sounds: [
         { id: 1, label: "Laughing" },
         { id: 2, label: "Crying" },
@@ -80,15 +87,36 @@ const Home = () => {
   const [selectedPerson, setSelectedPerson] = useState("Dave Ramsey");
   const [selectedSound, setSelectedSound] = useState("");
 
+  useEffect(() => {
+    // const context = new AudioContext();
+
+    // const contextResumePlayback = () => {
+    //   context.resume().then(() => {
+    //     console.log("Playback resumed successfully");
+    //   });
+    // };
+
+    // document
+    //   .querySelector("button")
+    //   .addEventListener("click", contextResumePlayback);
+
+    document.querySelector("body").addEventListener("click", () => {
+      setSelectedSound("");
+    });
+  });
+
   return (
     <>
       <header>
         <Slice hDir='Center' vDir='Center' classes='bg-White masthead'>
-          <div class='mastheadWrapper margin-top--md'>
-            <img src='https://cdn.ramseysolutions.net/media/rscom/logos/masthead-logo-ramsey.svg' />
+          <div className='mastheadWrapper margin-top--md'>
+            <img
+              src='https://cdn.ramseysolutions.net/media/rscom/logos/masthead-logo-ramsey.svg'
+              alt='logo'
+            />
           </div>
-          <div class='headingWrapper'>
-            <h1 class='color-darkBlue'>Ramsey Sounds</h1>
+          <div className='headingWrapper'>
+            <h1 className='color-darkBlue'>Ramsey Sounds</h1>
           </div>
         </Slice>
       </header>
@@ -96,15 +124,15 @@ const Home = () => {
         <Slice
           hDir='Center'
           vDir='Center'
-          classes='Selected-title bg-mediumGray'
+          classes='Selected-title bg-alternateYellow'
         >
-          <h2 class='color-lightBlue'>{selectedPerson}</h2>
+          <h2 className='color-darkBlue'>{selectedPerson}</h2>
         </Slice>
         <Slice
           h='lg'
           hDir='Center'
-          vDir='Center'
-          classes='bg-darkBlue margin-top--md margin-bottom--md'
+          vDir='Start'
+          classes='Slice-gap bg-darkBlue margin-top--md margin-bottom--md'
         >
           {labels.map((label) =>
             label.person === selectedPerson
@@ -112,10 +140,21 @@ const Home = () => {
                   <Button
                     setSelectedSound={setSelectedSound}
                     selected={selectedSound}
-                    sound={sound.label}
+                    label={sound.label}
+                    name={label.name}
+                    sound={sound.sound}
                     key={sound.id}
+                    id={sound.id}
                   >
-                    <Sound />
+                    {sound.sound ? (
+                      <Sound
+                        id={sound.id}
+                        sound={sound.sound}
+                        name={label.name}
+                      />
+                    ) : (
+                      ""
+                    )}
                     <Label label={sound.label} />
                   </Button>
                 ))
@@ -131,7 +170,7 @@ const Home = () => {
           />
         </Block>
       </Slice>
-      <div class='icon-credit'>
+      <div className='icon-credit'>
         Icons made by{" "}
         <a href='https://www.freepik.com' title='Freepik'>
           Freepik

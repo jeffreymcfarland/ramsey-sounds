@@ -5,7 +5,7 @@
   } @else if $height == md {
     min-height: 300px;
   } @else if $height == lg {
-    min-height: 450px;
+    min-height: 475px;
   }
 }
 
@@ -16,7 +16,10 @@
 .Slice {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+
+  &-gap {
+    gap: 40px;
+  }
 
   &-sm {
     @include slice-sizing(sm);

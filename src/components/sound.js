@@ -1,21 +1,23 @@
-import * as React from "react";
-import { Howl, Howler } from "howler";
+import React, { useEffect } from "react";
 
-import daveLaugh from "../assets/audio/Dave-Laughing.mp3";
-
-const sound = new Howl({
-  src: [daveLaugh],
-  volume: 0.1,
-});
-
-const play = () => {
-  sound.on("play", function () {
-    sound.play();
+const Sound = ({ sound, id, name }) => {
+  useEffect(() => {
+    document.querySelector("body").addEventListener("click", () => {
+      const player = document.getElementById(`${name}-player-${id}`);
+      if (player != null) {
+        player.pause();
+        player.currentTime = 0;
+      }
+    });
   });
-};
 
-const Sound = () => {
-  return <div onClick={play()}></div>;
+  return (
+    <audio id={`${name}-player-${id}`}>
+      <source src={sound} type='audio/mpeg' />
+      Your browser does not support the
+      <code>audio</code> element.
+    </audio>
+  );
 };
 
 export default Sound;

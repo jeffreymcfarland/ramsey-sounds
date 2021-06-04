@@ -10,7 +10,7 @@ const Position = (horizontalDir, verticalDir) => {
 
 const Slice = ({ h, hDir, vDir, classes, children }) => {
   return (
-    <div class={`Slice ${Size(h)} ${Position(hDir, vDir)} ${classes}`}>
+    <div className={`Slice ${Size(h)} ${Position(hDir, vDir)} ${classes}`}>
       {children}
     </div>
   );

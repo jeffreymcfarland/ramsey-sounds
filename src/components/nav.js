@@ -41,10 +41,10 @@ const Nav = ({ setSelectedPerson, selected }) => {
   ]);
 
   return (
-    <nav class='Nav'>
+    <nav className='Nav'>
       {persons.map((person) => (
         <button
-          class={`Nav-button ${
+          className={`Nav-button ${
             person.name === selected ? "Nav-button--selected" : ""
           }`}
           onClick={() => setSelectedPerson(person.name)}
