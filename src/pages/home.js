@@ -162,7 +162,9 @@ const Home = () => {
           )}
         </Slice>
       </main>
-      <Slice hDir='Center' vDir='Center' classes='Sticky bg-mediumGray'>
+      <Slice hDir='Center' vDir='Center' classes='Sticky bg-lightGray'>
+        <div className='Nav-overlay-left'></div>
+        <div className='Nav-overlay-right'></div>
         <Block classes='Block'>
           <Nav
             setSelectedPerson={setSelectedPerson}

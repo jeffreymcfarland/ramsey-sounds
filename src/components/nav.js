@@ -41,19 +41,21 @@ const Nav = ({ setSelectedPerson, selected }) => {
   ]);
 
   return (
-    <nav className='Nav'>
-      {persons.map((person) => (
-        <button
-          className={`Nav-button ${
-            person.name === selected ? "Nav-button--selected" : ""
-          }`}
-          onClick={() => setSelectedPerson(person.name)}
-          key={person.id}
-        >
-          <img src={person.src} alt={person.name} />
-        </button>
-      ))}
-    </nav>
+    <>
+      <nav className='Nav'>
+        {persons.map((person) => (
+          <button
+            className={`Nav-button ${
+              person.name === selected ? "Nav-button--selected" : ""
+            }`}
+            onClick={() => setSelectedPerson(person.name)}
+            key={person.id}
+          >
+            <img src={person.src} alt={person.name} />
+          </button>
+        ))}
+      </nav>
+    </>
   );
 };
 

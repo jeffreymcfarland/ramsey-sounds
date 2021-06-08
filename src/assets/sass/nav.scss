@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .Nav {
   width: max-content;
   display: flex;
@@ -6,7 +8,7 @@
   & img {
     width: 50px;
     border-radius: 50px;
-    margin: 0px 10px;
+    margin: 0px 12.5px;
     transition: all 0.5s ease;
   }
 
@@ -24,5 +26,45 @@
         border-radius: 60px;
       }
     }
+  }
+
+  &-overlay-left {
+    position: absolute;
+    width: 23%;
+    height: 90px;
+    margin-right: 77%;
+    bottom: 0px;
+    z-index: 5;
+    background: linear-gradient(
+      90deg,
+      map.get($colors, "White"),
+      map.get($colors, "White"),
+      map.get($colors, "White"),
+      map.get($colors, "White"),
+      map.get($colors, "White"),
+      map.get($colors, "White"),
+      map.get($colors, "White"),
+      transparent
+    );
+  }
+
+  &-overlay-right {
+    position: absolute;
+    width: 23%;
+    height: 90px;
+    margin-left: 77%;
+    bottom: 0px;
+    z-index: 5;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      map.get($colors, "White"),
+      map.get($colors, "White"),
+      map.get($colors, "White"),
+      map.get($colors, "White"),
+      map.get($colors, "White"),
+      map.get($colors, "White"),
+      map.get($colors, "White")
+    );
   }
 }
