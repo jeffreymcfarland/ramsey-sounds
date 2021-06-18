@@ -88,18 +88,6 @@ const Home = () => {
   const [selectedSound, setSelectedSound] = useState("");
 
   useEffect(() => {
-    // const context = new AudioContext();
-
-    // const contextResumePlayback = () => {
-    //   context.resume().then(() => {
-    //     console.log("Playback resumed successfully");
-    //   });
-    // };
-
-    // document
-    //   .querySelector("button")
-    //   .addEventListener("click", contextResumePlayback);
-
     document.querySelector("body").addEventListener("click", () => {
       setSelectedSound("");
     });
@@ -116,7 +104,7 @@ const Home = () => {
             />
           </div>
           <div className='headingWrapper'>
-            <h1 className='color-darkBlue'>Ramsey Sounds</h1>
+            <h1 className='color-Blue font-semibold'>Ramsey Sounds</h1>
           </div>
         </Slice>
       </header>
@@ -126,7 +114,9 @@ const Home = () => {
           vDir='Center'
           classes='Selected-title bg-alternateYellow'
         >
-          <h2 className='color-darkBlue'>{selectedPerson}</h2>
+          <h2 className='color-darkBlue font-semibold margin-bottom--sm margin-top--sm'>
+            {selectedPerson}
+          </h2>
         </Slice>
         <Slice
           h='lg'
@@ -163,8 +153,6 @@ const Home = () => {
         </Slice>
       </main>
       <Slice hDir='Center' vDir='Center' classes='Sticky bg-lightGray'>
-        <div className='Nav-overlay-left'></div>
-        <div className='Nav-overlay-right'></div>
         <Block classes='Block'>
           <Nav
             setSelectedPerson={setSelectedPerson}

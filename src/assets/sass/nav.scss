@@ -16,7 +16,7 @@
     border: none;
     background-color: inherit;
     padding: 0;
-    opacity: 0.8;
+    opacity: 0.75;
     transition: all 0.5s ease;
 
     &--selected {
@@ -36,7 +36,7 @@
     bottom: 0px;
     z-index: 5;
     background: linear-gradient(
-      90deg,
+      0.25turn,
       map.get($colors, "White"),
       map.get($colors, "White"),
       map.get($colors, "White"),
@@ -56,7 +56,7 @@
     bottom: 0px;
     z-index: 5;
     background: linear-gradient(
-      90deg,
+      0.25turn,
       transparent,
       map.get($colors, "White"),
       map.get($colors, "White"),

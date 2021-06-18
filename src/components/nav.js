@@ -45,7 +45,11 @@ const Nav = ({ setSelectedPerson, selected }) => {
       <nav className='Nav'>
         {persons.map((person) => (
           <button
-            className={`Nav-button ${
+            className={`Nav-button Nav-button--${person.name
+              .replace(".", "")
+              .replace(" ", "")
+              .replace(" ", "")
+              .toLowerCase()} ${
               person.name === selected ? "Nav-button--selected" : ""
             }`}
             onClick={() => setSelectedPerson(person.name)}
