@@ -15,7 +15,7 @@ const Button = ({
         className='Sound-button'
         onClick={() => {
           setSelectedSound(label);
-          if (sound != undefined) {
+          if (sound !== undefined) {
             document.getElementById(`${name}-player-${id}`).play();
           }
         }}

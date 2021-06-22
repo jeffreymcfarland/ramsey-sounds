@@ -1,7 +1,7 @@
 .Block {
-  width: 75%;
-  height: 90px;
-  overflow-x: scroll;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
   display: grid;
   align-items: center;
 }

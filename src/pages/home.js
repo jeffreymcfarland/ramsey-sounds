@@ -152,8 +152,8 @@ const Home = () => {
           )}
         </Slice>
       </main>
-      <Slice hDir='Center' vDir='Center' classes='Sticky bg-lightGray'>
-        <Block classes='Block'>
+      <Slice hDir='Center' vDir='Center' classes='Slice-xs Sticky bg-lightGray'>
+        <Block ids='Nav-block' classes='Block'>
           <Nav
             setSelectedPerson={setSelectedPerson}
             selected={selectedPerson}
