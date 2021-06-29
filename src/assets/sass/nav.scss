@@ -31,44 +31,4 @@
       }
     }
   }
-
-  &-overlay-left {
-    position: absolute;
-    width: 23%;
-    height: 90px;
-    margin-right: 77%;
-    bottom: 0px;
-    z-index: 5;
-    background: linear-gradient(
-      0.25turn,
-      map.get($colors, "White"),
-      map.get($colors, "White"),
-      map.get($colors, "White"),
-      map.get($colors, "White"),
-      map.get($colors, "White"),
-      map.get($colors, "White"),
-      map.get($colors, "White"),
-      transparent
-    );
-  }
-
-  &-overlay-right {
-    position: absolute;
-    width: 23%;
-    height: 90px;
-    margin-left: 77%;
-    bottom: 0px;
-    z-index: 5;
-    background: linear-gradient(
-      0.25turn,
-      transparent,
-      map.get($colors, "White"),
-      map.get($colors, "White"),
-      map.get($colors, "White"),
-      map.get($colors, "White"),
-      map.get($colors, "White"),
-      map.get($colors, "White"),
-      map.get($colors, "White")
-    );
-  }
 }
