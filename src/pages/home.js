@@ -5,6 +5,7 @@ import Nav from "../components/nav";
 import Sound from "../components/sound";
 import Slice from "../layouts/slice";
 import Block from "../layouts/block";
+import AccentLine from "../components/accentLine";
 import "../assets/sass/home.scss";
 
 import daveLaugh from "../assets/audio/Dave-Laughing.mp3";
@@ -109,14 +110,11 @@ const Home = () => {
         </Slice>
       </header>
       <main>
-        <Slice
-          hDir='Center'
-          vDir='Center'
-          classes='Selected-title bg-alternateYellow'
-        >
-          <h2 className='color-darkBlue font-semibold margin-bottom--sm margin-top--sm'>
+        <Slice hDir='Center' vDir='Center' classes='Selected-title'>
+          <h2 className='color-alternateYellow font-semibold margin-bottom--sm margin-top--sm'>
             {selectedPerson}
           </h2>
+          <AccentLine classes='bg-alternateYellow' />
         </Slice>
         <Slice
           h='lg'
@@ -152,7 +150,11 @@ const Home = () => {
           )}
         </Slice>
       </main>
-      <Slice hDir='Center' vDir='Center' classes='Slice-xs Sticky bg-lightGray'>
+      <Slice
+        hDir='Center'
+        vDir='Center'
+        classes='height-xs Sticky bg-lightGray'
+      >
         <Block ids='Nav-block' classes='Block'>
           <Nav
             setSelectedPerson={setSelectedPerson}

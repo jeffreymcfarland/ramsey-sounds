@@ -6,6 +6,7 @@
 @import "./label.scss";
 @import "./nav.scss";
 @import "./swipeArrows.scss";
+@import "./accentLine.scss";
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -58,6 +59,7 @@ h2 {
   border: 10px solid map.get($colors, "darkBlue");
   border-radius: 15px;
   margin: 0px 15px;
+  flex-direction: column;
 }
 
 .Sticky {
@@ -84,3 +86,8 @@ h2 {
 @include margin-spacing(left);
 @include margin-spacing(right);
 @include margin-spacing("");
+
+@include height-sizing(xs);
+@include height-sizing(sm);
+@include height-sizing(md);
+@include height-sizing(lg);

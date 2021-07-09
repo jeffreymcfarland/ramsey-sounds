@@ -75,7 +75,6 @@ const Nav = ({ setSelectedPerson, selected }) => {
   return (
     <>
       <nav className='Nav'>
-        <SwipeArrows left={leftArrow} right={rightArrow} />
         {persons.map((person) => (
           <button
             ref={
@@ -106,6 +105,7 @@ const Nav = ({ setSelectedPerson, selected }) => {
           </button>
         ))}
       </nav>
+      <SwipeArrows left={leftArrow} right={rightArrow} />
     </>
   );
 };

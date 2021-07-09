@@ -14,6 +14,13 @@ $spacing: (
   "lg": 30px,
 );
 
+$height: (
+  "xs": 90px,
+  "sm": 90px,
+  "md": 90px,
+  "lg": 90px,
+);
+
 @each $color, $hex in $colors {
   .bg-#{$color} {
     background-color: $hex;
@@ -35,6 +42,18 @@ $spacing: (
   @each $size, $unit in $spacing {
     .margin--#{$size} {
       margin: #{$unit};
+    }
+  }
+}
+
+@mixin height-sizing($height-size) {
+  @if $height-size {
+    @each $size, $unit in $height {
+      @if $height-size == $size {
+        .height-#{$size} {
+          height: #{$unit};
+        }
+      }
     }
   }
 }
