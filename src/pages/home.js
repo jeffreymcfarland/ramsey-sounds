@@ -9,6 +9,10 @@ import AccentLine from "../components/accentLine";
 import "../assets/sass/home.scss";
 
 import daveLaugh from "../assets/audio/Dave-Laughing.mp3";
+import thatsStupid from "../assets/audio/Thats-Stupid.mp3";
+import hillBilly from "../assets/audio/Hill-Billy.mp3";
+import wellDone from "../assets/audio/Well-Done.mp3";
+import hardWork from "../assets/audio/Hard-Work.mp3";
 
 const Home = () => {
   const [labels, setLabels] = useState([
@@ -17,9 +21,9 @@ const Home = () => {
       name: "daveRamsey",
       sounds: [
         { id: 1, label: "Laughing", sound: daveLaugh },
-        { id: 2, label: "Crying" },
-        { id: 3, label: "Shouting" },
-        { id: 4, label: "Celebrating" },
+        { id: 2, label: "That's Stupid", sound: thatsStupid },
+        { id: 3, label: "Hillbilly", sound: hillBilly },
+        { id: 4, label: "Well Done", sound: wellDone },
         { id: 5, label: "Funny" },
         { id: 6, label: "Misc." },
       ],
@@ -76,7 +80,7 @@ const Home = () => {
       person: "Dr. John Delony",
       name: "drJohnDelony",
       sounds: [
-        { id: 1, label: "Laughing" },
+        { id: 1, label: "Hard Work", sound: hardWork },
         { id: 2, label: "Crying" },
         { id: 3, label: "Shouting" },
         { id: 4, label: "Celebrating" },
