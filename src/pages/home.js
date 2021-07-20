@@ -7,6 +7,7 @@ import Slice from "../layouts/slice";
 import Block from "../layouts/block";
 import AccentLine from "../components/accentLine";
 import "../assets/sass/home.scss";
+import { useInView } from "react-intersection-observer";
 
 import daveLaugh from "../assets/audio/Dave-Laughing.mp3";
 import thatsStupid from "../assets/audio/Thats-Stupid.mp3";
@@ -15,6 +16,10 @@ import wellDone from "../assets/audio/Well-Done.mp3";
 import hardWork from "../assets/audio/Hard-Work.mp3";
 
 const Home = () => {
+  const [bottomDiv, bottomDivInView, bottomDivEntry] = useInView({
+    threshold: 0.9,
+  });
+
   const [labels, setLabels] = useState([
     {
       person: "Dave Ramsey",
@@ -153,11 +158,18 @@ const Home = () => {
               : ""
           )}
         </Slice>
+        <div
+          class='bottom-div'
+          ref={bottomDiv}
+          data-visible={bottomDivInView}
+        ></div>
       </main>
       <Slice
         hDir='Center'
         vDir='Center'
-        classes='height-xs Sticky bg-lightGray'
+        classes={`Nav-slice height-xs Sticky ${
+          bottomDivInView ? "noOpacity" : ""
+        }`}
       >
         <Block ids='Nav-block' classes='Block'>
           <Nav

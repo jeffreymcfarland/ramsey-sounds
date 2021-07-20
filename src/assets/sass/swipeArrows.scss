@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   z-index: 2;
-  color: map.get($colors, "darkGray");
+  // color: map.get($colors, "darkGray");
   pointer-events: none;
 }
 
@@ -13,11 +13,10 @@
   display: none;
   font-size: 24px;
   height: 90px;
-  width: 30px;
-  background-color: map.get($colors, "White");
-  //   opacity: 0.5;
+  width: 45px;
+  // background-color: map.get($colors, "White");
   justify-content: center;
-  background: rgb(255, 255, 255);
+  // background: rgb(255, 255, 255);
 
   &--visible {
     display: flex;
@@ -30,8 +29,8 @@
     background: linear-gradient(
       270deg,
       rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.80015756302521) 40%,
-      rgba(255, 255, 255, 0.8953956582633054) 70%
+      rgba(255, 255, 255, 0.5) 55%,
+      rgba(255, 255, 255, 0.7) 70%
     );
   }
 
@@ -39,10 +38,13 @@
     left: 0px;
     background: linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.9) 30%,
-      rgba(255, 255, 255, 0.80015756302521) 60%,
+      rgba(255, 255, 255, 0.7) 30%,
+      rgba(255, 255, 255, 0.5) 45%,
       rgba(255, 255, 255, 0) 100%
     );
+  }
+
+  &.noOpacity {
   }
 }
 

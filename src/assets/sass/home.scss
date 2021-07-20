@@ -38,6 +38,7 @@ h2 {
 .masthead {
   display: flex;
   flex-direction: column;
+  box-shadow: 0 3px 10px map.get($colors, "darkGray");
 
   &Wrapper {
     height: 32px;

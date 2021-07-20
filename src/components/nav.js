@@ -4,10 +4,10 @@ import SwipeArrows from "./swipeArrows";
 
 const Nav = ({ setSelectedPerson, selected }) => {
   const [daveRef, daveInView, daveEntry] = useInView({
-    threshold: 0,
+    threshold: 0.9,
   });
   const [delonyRef, delonyInView, delonyEntry] = useInView({
-    threshold: 0,
+    threshold: 0.9,
   });
   const [other, otherInView, otherEntry] = useInView({
     threshold: 0,
