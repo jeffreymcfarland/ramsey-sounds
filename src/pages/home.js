@@ -106,24 +106,32 @@ const Home = () => {
   return (
     <>
       <header>
-        <Slice hDir='Center' vDir='Center' classes='bg-White masthead'>
-          <div className='mastheadWrapper margin-top--md'>
-            <img
-              src='https://cdn.ramseysolutions.net/media/rscom/logos/masthead-logo-ramsey.svg'
-              alt='logo'
-            />
-          </div>
+        <Slice
+          hDir='Center'
+          vDir='Center'
+          classes='bg-White masthead margin-bottom--md'
+        >
           <div className='headingWrapper'>
             <h1 className='color-Blue font-semibold'>Ramsey Sounds</h1>
+          </div>
+          <div className='mastheadWrapper margin-top--sm margin-bottom--md'>
+            <AccentLine classes='bg-Blue margin-right--md' />
+            <img
+              // src='https://cdn.ramseysolutions.net/media/rscom/logos/masthead-logo-ramsey.svg'
+              src='https://cdn.ramseysolutions.net/cms/sites/ramseysolutions-com/favicons/favicon.ico'
+              alt='logo'
+            />
+            <AccentLine classes='bg-Blue margin-left--md' />
           </div>
         </Slice>
       </header>
       <main>
         <Slice hDir='Center' vDir='Center' classes='Selected-title'>
-          <h2 className='color-alternateYellow font-semibold margin-bottom--sm margin-top--sm'>
-            {selectedPerson}
-          </h2>
-          <AccentLine classes='bg-alternateYellow' />
+          <div className='SelectedWrapper margin-bottom--sm margin-top--sm'>
+            <h2 className='color-alternateYellow font-semibold padding--sm'>
+              {selectedPerson}
+            </h2>
+          </div>
         </Slice>
         <Slice
           h='lg'

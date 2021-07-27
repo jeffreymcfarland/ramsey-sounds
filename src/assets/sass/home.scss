@@ -14,11 +14,6 @@ body {
   background-color: map.get($colors, "lightGray");
 }
 
-header {
-  position: sticky;
-  top: 0;
-}
-
 p {
   margin: 0px;
   font-size: 24px;
@@ -40,8 +35,15 @@ h2 {
   flex-direction: column;
   box-shadow: 0 3px 10px map.get($colors, "darkGray");
 
+  @media (min-width: 601px) {
+    box-shadow: none;
+  }
+
   &Wrapper {
     height: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
     & img {
       display: block;
@@ -56,11 +58,20 @@ h2 {
   align-items: center;
 }
 
-.Selected-title {
-  border: 10px solid map.get($colors, "darkBlue");
-  border-radius: 15px;
-  margin: 0px 15px;
-  flex-direction: column;
+.Selected {
+  &-title {
+    // border: 10px solid map.get($colors, "darkBlue");
+    // border-radius: 15px;
+    // margin: 0px 15px;
+    // flex-direction: column;
+    position: sticky;
+    top: 0px;
+  }
+
+  &Wrapper {
+    background-color: rgba(map.get($colors, "alternateYellow"), 0.1);
+    border-radius: 5px;
+  }
 }
 
 .Sticky {
@@ -82,11 +93,16 @@ h2 {
   display: none;
 }
 
-@include margin-spacing(bottom);
-@include margin-spacing(top);
-@include margin-spacing(left);
-@include margin-spacing(right);
-@include margin-spacing("");
+@include spacing(margin, bottom);
+@include spacing(margin, top);
+@include spacing(margin, left);
+@include spacing(margin, right);
+@include spacing(margin, all);
+@include spacing(padding, bottom);
+@include spacing(padding, top);
+@include spacing(padding, left);
+@include spacing(padding, right);
+@include spacing(padding, all);
 
 @include height-sizing(xs);
 @include height-sizing(sm);

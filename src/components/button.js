@@ -10,7 +10,7 @@ const Button = ({
   children,
 }) => {
   return (
-    <div className='Sound-buttonWrapper margin-bottom--md'>
+    <div className='Sound-buttonWrapper margin-bottom--md margin-top--md'>
       <button
         className='Sound-button'
         onClick={() => {

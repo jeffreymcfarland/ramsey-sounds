@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   z-index: 2;
-  // color: map.get($colors, "darkGray");
   pointer-events: none;
 }
 
@@ -12,11 +11,9 @@
   position: absolute;
   display: none;
   font-size: 24px;
-  height: 90px;
+  height: 100%;
   width: 45px;
-  // background-color: map.get($colors, "White");
   justify-content: center;
-  // background: rgb(255, 255, 255);
 
   &--visible {
     display: flex;
@@ -42,9 +39,6 @@
       rgba(255, 255, 255, 0.5) 45%,
       rgba(255, 255, 255, 0) 100%
     );
-  }
-
-  &.noOpacity {
   }
 }
 

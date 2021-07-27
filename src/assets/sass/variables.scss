@@ -15,10 +15,10 @@ $spacing: (
 );
 
 $height: (
-  "xs": 90px,
+  "xs": 70px,
   "sm": 90px,
-  "md": 90px,
-  "lg": 90px,
+  "md": 110px,
+  "lg": 130px,
 );
 
 @each $color, $hex in $colors {
@@ -30,11 +30,17 @@ $height: (
   }
 }
 
-@mixin margin-spacing($direction) {
+@mixin spacing($type, $direction) {
   @if $direction {
     @each $size, $unit in $spacing {
-      .margin-#{$direction}--#{$size} {
-        margin-#{$direction}: #{$unit};
+      @if $direction != all {
+        .#{$type}-#{$direction}--#{$size} {
+          #{$type}-#{$direction}: #{$unit};
+        }
+      } @else {
+        .#{$type}--#{$size} {
+          #{$type}: #{$unit};
+        }
       }
     }
   }
