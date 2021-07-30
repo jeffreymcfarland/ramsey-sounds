@@ -47,14 +47,6 @@ const Nav = ({ setSelectedPerson, selected }) => {
       view: otherInView,
     },
     {
-      id: 5,
-      name: "Anthony ONeal",
-      src:
-        "https://cdn2.ramseysolutions.net/dynamic/daveramsey.com/media/personalities/headshots/personality-anthony-oneal.jpg/120w.jpg",
-      ref: other,
-      view: otherInView,
-    },
-    {
       id: 6,
       name: "Dr. John Delony",
       src:

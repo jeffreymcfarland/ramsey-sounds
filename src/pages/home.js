@@ -14,6 +14,7 @@ import thatsStupid from "../assets/audio/Thats-Stupid.mp3";
 import hillBilly from "../assets/audio/Hill-Billy.mp3";
 import wellDone from "../assets/audio/Well-Done.mp3";
 import hardWork from "../assets/audio/Hard-Work.mp3";
+import wayToGo from "../assets/audio/Way-To-Go.mp3";
 
 const Home = () => {
   const [bottomDiv, bottomDivInView, bottomDivEntry] = useInView({
@@ -26,10 +27,10 @@ const Home = () => {
       name: "daveRamsey",
       sounds: [
         { id: 1, label: "Laughing", sound: daveLaugh },
-        { id: 2, label: "That's Stupid", sound: thatsStupid },
-        { id: 3, label: "Hillbilly", sound: hillBilly },
-        { id: 4, label: "Well Done", sound: wellDone },
-        { id: 5, label: "Funny" },
+        { id: 2, label: "Well Done", sound: wellDone },
+        { id: 3, label: "Way To Go", sound: wayToGo },
+        { id: 4, label: "Hillbilly", sound: hillBilly },
+        { id: 5, label: "That's Stupid", sound: thatsStupid },
         { id: 6, label: "Misc." },
       ],
     },
@@ -60,18 +61,6 @@ const Home = () => {
     {
       person: "Christy Wright",
       name: "christyWright",
-      sounds: [
-        { id: 1, label: "Laughing" },
-        { id: 2, label: "Crying" },
-        { id: 3, label: "Shouting" },
-        { id: 4, label: "Celebrating" },
-        { id: 5, label: "Funny" },
-        { id: 6, label: "Misc." },
-      ],
-    },
-    {
-      person: "Anthony ONeal",
-      name: "anthonyOneal",
       sounds: [
         { id: 1, label: "Laughing" },
         { id: 2, label: "Crying" },
@@ -117,7 +106,6 @@ const Home = () => {
           <div className='mastheadWrapper margin-top--sm margin-bottom--md'>
             <AccentLine classes='bg-Blue margin-right--md' />
             <img
-              // src='https://cdn.ramseysolutions.net/media/rscom/logos/masthead-logo-ramsey.svg'
               src='https://cdn.ramseysolutions.net/cms/sites/ramseysolutions-com/favicons/favicon.ico'
               alt='logo'
             />
